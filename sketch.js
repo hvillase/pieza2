@@ -1,31 +1,25 @@
-// sketch.js
-
-var cnv;
-
-function centerCanvas() {
-  var x = (windowWidth - width) / 2;
-  var y = (windowHeight - height) / 2;
-  cnv.position(x, y);
-}
+let posX = 40;
+//let posY = 40;
 
 function setup() {
-  cnv = createCanvas(windowWidth, windowHeight);
-  centerCanvas();
-  background(255, 0, 200);
-}
-
-function windowResized() {
-  centerCanvas();
+  var cnv = createCanvas(windowWidth, windowHeight);
+  cnv.style('display', 'block');
+  background(255, 200, 200);
 }
 
 function draw(){
-rect(60, 90, 80, 30);
+ellipse(posX, 40, 50, 50);
+posX = posX + 1;
+//posY = poxY + 2;
+	if(posX == windowWidth){
+		posX = 40
+	}
+	
+/*if(posY == windowHeight){
+		posY = 40;
+	}*/
 }
-
-
-
-
-
-
-
-
+	
+	
+	
+	
